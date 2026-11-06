@@ -6,9 +6,9 @@
 
 | MSSV | Họ tên | Vai trò | Nhánh |
 |------|--------|---------|-------|
-| _(điền)_ | Võ Ngọc Tuyết Nhung | A – Trưởng nhóm | `feature/khung-csdl`, `feature/he-thong`, `feature/khach-hang`, `feature/hoa-don` |
-| _(điền)_ | Võ Nhật Song Hân | B – Thành viên 1 | `feature/danh-muc` |
-| _(điền)_ | Lê Thị Kim Loan | C – Thành viên 2 | `feature/ban-hang` |
+| 49.01.103.058 | Võ Ngọc Tuyết Nhung | A – Trưởng nhóm | `feature/khung-csdl`, `feature/he-thong`, `feature/khach-hang`, `feature/hoa-don` |
+| 49.01.103.025 | Võ Nhật Song Hân | B – Thành viên 1 | `feature/danh-muc` |
+| 49.01.103.045 | Lê Thị Kim Loan | C – Thành viên 2 | `feature/ban-hang` |
 | 49.01.103.006 | Huỳnh Thị Hồng Ân | D – Thành viên 3 | `feature/khuyen-mai-thong-ke` |
 
 ## Mô tả đề tài
