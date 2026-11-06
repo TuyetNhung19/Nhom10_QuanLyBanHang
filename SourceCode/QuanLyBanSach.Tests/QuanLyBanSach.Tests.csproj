@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Kiểm thử đơn vị (MSTest): phần khuyến mãi (BLL) và các Presenter MVP (dùng View giả, BLL giả)
+       – không cần CSDL, không mở Form nào -->
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <RootNamespace>QuanLyBanSach.Tests</RootNamespace>
+    <!-- Cần vì tham chiếu project GUI (WinForms) để test Presenter -->
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.6.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyBanSach.DTO\QuanLyBanSach.DTO.csproj" />
+    <ProjectReference Include="..\QuanLyBanSach.BLL\QuanLyBanSach.BLL.csproj" />
+    <ProjectReference Include="..\QuanLyBanSach.GUI\QuanLyBanSach.GUI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+  </ItemGroup>
+
+</Project>

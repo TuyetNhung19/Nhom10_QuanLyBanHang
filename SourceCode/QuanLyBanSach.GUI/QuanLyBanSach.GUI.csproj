@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Lớp GUI (project khởi động): Form, UserControl. Chỉ gọi BLL, không gọi DAL, không viết SQL.
+       Tham chiếu DTO, BLL -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>QuanLyBanSach.GUI</RootNamespace>
+    <AssemblyName>QuanLyBanSach.GUI</AssemblyName>
+    <!-- ApplicationConfiguration.Initialize() đọc các thiết lập dưới đây -->
+    <ApplicationDefaultFont>Segoe UI, 10pt</ApplicationDefaultFont>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+    <ApplicationVisualStyles>true</ApplicationVisualStyles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyBanSach.DTO\QuanLyBanSach.DTO.csproj" />
+    <ProjectReference Include="..\QuanLyBanSach.BLL\QuanLyBanSach.BLL.csproj" />
+  </ItemGroup>
+
+  <!-- FrmBanHang được tách thành nhiều file partial. Đánh dấu các file phụ là Code (không phải Form)
+       để Visual Studio không mở Designer và không sinh thêm .resx trùng tên cho chúng
+       (lỗi "Two output file names resolved to the same output path ... FrmBanHang.resources"). -->
+  <ItemGroup>
+    <Compile Update="Forms\FrmBanHang.PhimTat.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FrmBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Forms\FrmBanHang.DonTreo.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FrmBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Forms\FrmBanHang.KhachQuen.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FrmBanHang.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Remove="Forms\FrmBanHang.PhimTat.resx" />
+    <EmbeddedResource Remove="Forms\FrmBanHang.DonTreo.resx" />
+    <EmbeddedResource Remove="Forms\FrmBanHang.KhachQuen.resx" />
+  </ItemGroup>
+
+</Project>

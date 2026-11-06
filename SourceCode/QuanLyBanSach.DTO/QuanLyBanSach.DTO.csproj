@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Lớp DTO: dữ liệu thuần, KHÔNG tham chiếu project nào -->
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>QuanLyBanSach.DTO</RootNamespace>
+    <AssemblyName>QuanLyBanSach.DTO</AssemblyName>
+  </PropertyGroup>
+
+</Project>

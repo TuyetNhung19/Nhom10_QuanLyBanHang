@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Lớp DAL: nơi DUY NHẤT viết SQL / gọi stored procedure. Tham chiếu DTO -->
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>QuanLyBanSach.DAL</RootNamespace>
+    <AssemblyName>QuanLyBanSach.DAL</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyBanSach.DTO\QuanLyBanSach.DTO.csproj" />
+  </ItemGroup>
+
+</Project>
