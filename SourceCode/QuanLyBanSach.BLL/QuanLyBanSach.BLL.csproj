@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Lớp BLL: kiểm tra dữ liệu, quy tắc nghiệp vụ, tính tiền, khuyến mãi, event.
+       KHÔNG dùng hộp thoại hay control giao diện. Tham chiếu DTO, DAL -->
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>QuanLyBanSach.BLL</RootNamespace>
+    <AssemblyName>QuanLyBanSach.BLL</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyBanSach.DTO\QuanLyBanSach.DTO.csproj" />
+    <ProjectReference Include="..\QuanLyBanSach.DAL\QuanLyBanSach.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
